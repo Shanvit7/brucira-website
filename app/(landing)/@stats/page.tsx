@@ -1,32 +1,46 @@
 const Stats = () => (
   <>
-    <span>
-      <hr className="text-primary" />
-      <b className="uppercase">We are global</b>
-    </span>
-    <div className="grid grid-cols-4">
-      <div className="col-span-1">
-        <strong>60+</strong>
-        <p>brands</p> 
-        <p>partnered with</p>
-      </div>
+    <div className="flex items-center gap-4 py-6 font-everett">
+      <hr className="border-1 border-primary w-12" />
+      <b className="uppercase text-primary font-bold">We are global</b>
+    </div>
+
+    <div className="grid grid-cols-4 font-everett">
 
       <div className="col-span-1">
-        <strong>3K+</strong>
-        <p>brand content</p>  
-        <p>assets created</p>
+        <strong className="text-6xl font-bold">
+          60
+          <span className="text-primary">+</span>
+        </strong>
+        <p className="leading-tight font-semibold">brands</p>
+        <p className="leading-tight font-semibold">partnered with</p>
       </div>
 
-      <div className="col-span-1">
-        <strong>1K+</strong>
-        <p>global partners and</p>  
-        <p>collaborators</p>
+      <div className="col-span-1 ">
+        <strong className="text-6xl font-bold">
+          3K
+          <span className="text-primary">+</span>
+        </strong>
+        <p className="leading-tight font-semibold">brand content</p>
+        <p className="leading-tight font-semibold">assets created</p>
       </div>
 
-      <div className="col-span-1">
-        <strong>100+</strong>
-        <p>cities</p> 
-        <p>worldwide</p>
+      <div className="col-span-1 ">
+        <strong className="text-6xl font-extrabold">
+          1K
+          <span className="text-primary">+</span>
+        </strong>
+        <p className="leading-tight font-semibold">global partners and</p>
+        <p className="leading-tight font-semibold">collaborators</p>
+      </div>
+
+      <div className="col-span-1 ">
+        <strong className="text-6xl font-bold">
+          100
+          <span className="text-primary">+</span>
+        </strong>
+        <p className="leading-tight font-semibold">cities</p>
+        <p className="leading-tight font-semibold">worldwide</p>
       </div>
     </div>
   </>

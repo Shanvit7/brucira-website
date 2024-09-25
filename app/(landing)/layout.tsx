@@ -21,12 +21,24 @@ const LandingLayout: FC<LandingLayoutProps> = ({
 }) => (
   <main className="grid grid-cols-1">
     <header id="topbar">{topbar}</header>
-    <section id="intro">{intro}</section>
-    <section id="info">{info}</section>
-    <section id="stats">{stats}</section>
-    <section id="stats">{testimonials}</section>
-    <section id="faqs">{faqs}</section>
-    <footer id="footer">{footer}</footer>
+    <section className="p-16" id="intro">
+      {intro}
+    </section>
+    <section className="p-16" id="info">
+      {info}
+    </section>
+    <section className="p-16" id="stats">
+      {stats}
+    </section>
+    <section className="p-16" id="stats">
+      {testimonials}
+    </section>
+    <section className="p-16" id="faqs">
+      {faqs}
+    </section>
+    <footer id="footer">
+      {footer}
+    </footer>
   </main>
 );
 

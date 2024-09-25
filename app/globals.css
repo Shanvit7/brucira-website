@@ -6,15 +6,13 @@
   --primary-color: #EF001C;
   --primary-foreground: #FFFFFF;
   --text-color: black;
-  --primary-font: 'Open Sans', sans-serif;
-  --secondary-font: 'Everett', sans-serif;
   --footer-color: #F1F2F6;
   --form-input: #525252
 }
 
 body {
   color: var(--text-color);
-  font-family: var(--primary-font);
+  font-family: var(--font-open-sans), sans-serif;
   min-height: 100vh;
   overflow-x: hidden;
 }

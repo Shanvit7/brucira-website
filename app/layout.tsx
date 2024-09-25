@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Open_Sans } from 'next/font/google';
 import "./globals.css";
 
-const openSans = localFont({
-  src: "./fonts/OpenSans-Regular.woff",
-  variable: "--font-open-sans",
-  weight:"100 900"
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '600', '700', '800'], 
+  display: 'swap',
+});
+
+const everett = localFont({
+  src: "./fonts/Everett-Regular.woff",
+  variable: "--font-everett",
+  weight: "100 900",
 });
 
 export const metadata: Metadata = {
@@ -20,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${openSans.variable} antialiased`}
-      >
+      <body className={`${openSans.className} ${everett.variable} antialiased`}>
         {children}
       </body>
     </html>

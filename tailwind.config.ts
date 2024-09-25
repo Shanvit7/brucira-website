@@ -10,8 +10,8 @@ const config: Config = {
   theme: {
   	extend: {
   		fontFamily: {
-  			sans: ['Open Sans', 'sans-serif'],
-  			everett: ['Everett', 'sans-serif']
+			sans: ['Open Sans', 'sans-serif'],
+			'everett': ['var(--font-everett)'],
   		},
   		colors: {
   			primary: {
