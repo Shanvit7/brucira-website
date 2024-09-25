@@ -11,7 +11,7 @@ const config: Config = {
   	extend: {
   		fontFamily: {
   			sans: ['Open Sans', 'sans-serif'],
-			everett: ['Everett', 'sans-serif'] 
+  			everett: ['Everett', 'sans-serif']
   		},
   		colors: {
   			primary: {
@@ -54,37 +54,63 @@ const config: Config = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			},
-			  footer: 'var(--footer-color)',
-			  form:{
-				input: 'var(--form-input)'
-			  }
+  			footer: 'var(--footer-color)',
+  			form: {
+  				input: 'var(--form-input)'
+  			}
   		},
-		minHeight:{
-			btn: '1.875rem'
-		},
-		minWidth:{
-			btn: '8.5rem'
-		},
+  		minHeight: {
+  			btn: '1.875rem'
+  		},
+  		minWidth: {
+  			btn: '8.5rem'
+  		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)',
-			primary: '32px'
+  			primary: '32px'
   		},
-		keyframes: {
-			"marquee-x": {
-				from: { transform: "translateX(0)" },
-				to: { transform: "translateX(calc(-100% - var(--gap)))" },
-			  },
-			  "marquee-y": {
-				from: { transform: "translateY(0)" },
-				to: { transform: "translateY(calc(-100% - var(--gap)))" },
-			},
-		},
-		animation: {
-			"marquee-horizontal": "marquee-x var(--duration) infinite linear",
-			"marquee-vertical": "marquee-y var(--duration) linear infinite",
-		},
+  		keyframes: {
+  			'marquee-x': {
+  				from: {
+  					transform: 'translateX(0)'
+  				},
+  				to: {
+  					transform: 'translateX(calc(-100% - var(--gap)))'
+  				}
+  			},
+  			'marquee-y': {
+  				from: {
+  					transform: 'translateY(0)'
+  				},
+  				to: {
+  					transform: 'translateY(calc(-100% - var(--gap)))'
+  				}
+  			},
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			}
+  		},
+  		animation: {
+  			'marquee-horizontal': 'marquee-x var(--duration) infinite linear',
+  			'marquee-vertical': 'marquee-y var(--duration) linear infinite',
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
+  		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
