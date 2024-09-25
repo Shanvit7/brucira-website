@@ -39,7 +39,7 @@ const Marquee = ({
   pauseOnHover = false,
   reverse = false,
   className,
-  applyMask = true,
+  applyMask = false,
   ...props
 }: MarqueeProps) => (
     <div

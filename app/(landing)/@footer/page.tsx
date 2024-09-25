@@ -1,5 +1,6 @@
 // COMPONENTS
 import ContactForm from "@/components/custom/contact-form";
+import Marquee from "@/components/ui/marquee";
 
 const Footer = () => (
   <>
@@ -13,7 +14,11 @@ const Footer = () => (
       </div>
     </div>
 
-    <div className="bg-black h-40" />
+     <Marquee className="bg-black max-h-20 uppercase text-white text-4xl">
+      <div className="flex items-center">
+       Unleash the Visual Impact <div className="min-h-8 w-1 bg-white mx-8"/>
+      </div>
+     </Marquee> 
 
     <div className="p-16">
       <div className="grid grid-cols-5">
