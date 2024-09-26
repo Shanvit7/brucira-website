@@ -4,8 +4,9 @@
 
 :root {
   --primary-color: #EF001C;
+  --secondary-color: #111010;
   --primary-foreground: #FFFFFF;
-  --text-color: black;
+  --text-color: #111010;
   --footer-color: #F1F2F6;
   --form-input: #525252
 }

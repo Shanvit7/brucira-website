@@ -9,7 +9,7 @@ const Landing = () => (
         Designed with the specific needs of large B2B enterprises in mind, our
         platform offers a comprehensive solution to simplify.
       </h2>
-      <Button>
+      <Button variant="default">
         Get Professional Video Services
       </Button>
     </div>
