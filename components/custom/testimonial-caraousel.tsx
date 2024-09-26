@@ -77,13 +77,13 @@ const TestimonialCarousel = ({ items }: { items: Item[] }) => {
                     <div className="col-span-1 place-self-end self-end flex items-center gap-2">
                       <CarouselPrevious
                         onClick={handlePrevious}
-                        className="relative inset-auto rounded-xl border border-black"
+                        className="relative inset-auto rounded-xl border border-black min-w-16 min-h-10"
                       >
                         <ArrowLeftIcon className="h-4 w-4" />
                       </CarouselPrevious>
                       <CarouselNext
                         onClick={handleNext}
-                        className="relative inset-auto bg-primary text-white rounded-xl"
+                        className="relative inset-auto bg-primary text-white rounded-xl min-w-16 min-h-10"
                       >
                         <ArrowRightIcon className="h-4 w-4" />
                       </CarouselNext>

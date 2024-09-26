@@ -16,10 +16,10 @@ const AvatarCircles = ({ className, avatarUrls }: AvatarCirclesProps) => {
       {avatarUrls.map(({ image = "", name = "" }, index: number) => (
         <Image
           key={index}
-          className="h-10 w-10 rounded-full border-2 border-white dark:border-gray-800"
+          className="h-12 w-12 rounded-full border-2 border-white dark:border-gray-800"
           src={image}
-          width={40}
-          height={40}
+          width={60}
+          height={60}
           alt={name}
         />
       ))}

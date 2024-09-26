@@ -17,21 +17,21 @@ const Intro = () => (
       <br /> agency
     </h1>
 
-    <div className="col-span-2 flex items-center justify-between">
-      <div>
+    <div className="col-span-2 flex gap-8 items-center justify-between flex-wrap">
+      <div className="">
         <h2 className="font-semibold text-2xl">
           Designed with the specific needs of large B2B enterprises in mind,{" "}
           <br /> our platform offers a comprehensive solution to simplify.
         </h2>
-        <div className="py-8 flex items-center gap-4">
-          <Button className="p-4 px-6 flex items-center gap-2">
+        <div className="py-8 flex flex-wrap items-center gap-4">
+          <Button className="p-4 px-6 font-bold text-base flex items-center gap-2">
             Get Professional Video Services
             <ArrowRight className="size-4" />
           </Button>
           <div className="flex items-center gap-2">
             <AvatarCircles avatarUrls={COMPANY_PERSONS} />
             <p className="font-everett font-medium">
-              Marin / Ayesha <br /> <span className="text-secondar"> Global Services </span>
+              Marin / Ayesha <br /> <span className="text-secondary opacity-60"> Global Services </span>
             </p>
           </div>
         </div>
