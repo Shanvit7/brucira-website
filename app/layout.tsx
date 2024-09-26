@@ -12,38 +12,70 @@ const openSans = Open_Sans({
 const everett = localFont({
   src: [
     {
-      path: "./fonts/TWKEverett-Thin.woff2",
+      path: "./fonts/Everett/Thin.woff2",
       weight: "100",
       style: "normal",
     },
     {
-      path: "./fonts/TWKEverett-Light.woff2",
+      path: "./fonts/Everett/Light.woff2",
       weight: "300",
       style: "normal",
     },
     {
-      path: "./fonts/TWKEverett-Regular.woff2",
+      path: "./fonts/Everett/Regular.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/TWKEverett-Medium.woff2",
+      path: "./fonts/Everett/Medium.woff2",
       weight: "500",
       style: "normal",
     },
     {
-      path: "./fonts/TWKEverett-Bold.woff2",
+      path: "./fonts/Everett/Bold.woff2",
       weight: "700",
       style: "normal",
     },
     {
-      path: "./fonts/TWKEverett-Black.woff2",
+      path: "./fonts/Everett/Black.woff2",
       weight: "800",
       style: "normal",
-    }
+    },
   ],
   variable: "--font-everett",
   weight: "100 800",
+});
+
+const ttCommons = localFont({
+  src: [
+    {
+      path: "./fonts/TTCommons/Thin.woff2",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "./fonts/TTCommons/Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./fonts/TTCommons/Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/TTCommons/DemiBold.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "./fonts/TTCommons/Black.woff2",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-tt-commons",
+  weight: "100 900",
 });
 
 export const metadata: Metadata = {
@@ -58,7 +90,9 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={`${openSans.className} ${everett.variable} antialiased`}>
+      <body
+        className={`${openSans.className} ${everett.variable} ${ttCommons.variable} antialiased`}
+      >
         {children}
       </body>
     </html>

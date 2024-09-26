@@ -1,46 +1,59 @@
 const Stats = () => (
   <>
-    <div className="flex items-center gap-4 py-6 font-everett">
+    <div className="flex items-center gap-4 py-6">
       <hr className="border-1 border-primary w-12" />
-      <b className="uppercase text-primary font-bold">We are global</b>
+      <b className="uppercase text-primary text-xl font-semibold">
+        We are global
+      </b>
     </div>
 
     <div className="grid grid-cols-4 font-everett">
-
-      <div className="col-span-1">
-        <strong className="text-6xl font-bold">
+      <div className="col-span-1 font-everett font-medium space-y-2">
+        <strong className="text-7xl">
           60
           <span className="text-primary">+</span>
         </strong>
-        <p className="leading-tight font-semibold">brands</p>
-        <p className="leading-tight font-semibold">partnered with</p>
+        <p className="text-2xl">
+          brands
+          <br />
+          partnered with
+        </p>
       </div>
 
-      <div className="col-span-1 ">
-        <strong className="text-6xl font-bold">
+      <div className="col-span-1 font-everett font-medium space-y-2">
+        <strong className="text-7xl">
           3K
           <span className="text-primary">+</span>
         </strong>
-        <p className="leading-tight font-semibold">brand content</p>
-        <p className="leading-tight font-semibold">assets created</p>
+        <p className="text-2xl">
+          brand content
+          <br />
+          assets created
+        </p>
       </div>
 
-      <div className="col-span-1 ">
-        <strong className="text-6xl font-extrabold">
+      <div className="col-span-1 font-everett font-medium space-y-2">
+        <strong className="text-7xl">
           1K
           <span className="text-primary">+</span>
         </strong>
-        <p className="leading-tight font-semibold">global partners and</p>
-        <p className="leading-tight font-semibold">collaborators</p>
+        <p className="text-2xl">
+          global partners and
+          <br />
+          collaborators
+        </p>
       </div>
 
-      <div className="col-span-1 ">
-        <strong className="text-6xl font-bold">
+      <div className="col-span-1 space-y-2">
+        <strong className="text-7xl font-ttcommons font-medium">
           100
           <span className="text-primary">+</span>
         </strong>
-        <p className="leading-tight font-semibold">cities</p>
-        <p className="leading-tight font-semibold">worldwide</p>
+        <p className="text-2xl font-everett font-medium">
+          cities
+          <br />
+          worldwide
+        </p>
       </div>
     </div>
   </>

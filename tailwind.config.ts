@@ -12,6 +12,7 @@ const config: Config = {
   		fontFamily: {
 			sans: ['Open Sans', 'sans-serif'],
 			everett: ['var(--font-everett)'],
+			ttcommons: ['var(--font-tt-commons)'],
   		},
   		colors: {
   			primary: {

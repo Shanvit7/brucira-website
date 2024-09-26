@@ -1,7 +1,6 @@
 "use client";
-// HOOKS
+
 import { useState } from "react";
-// COMPONENTS
 import {
   Carousel,
   CarouselContent,
@@ -11,17 +10,17 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import Image, { StaticImageData } from "next/image";
-// ICONS
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 
 interface Item {
   image: StaticImageData;
   name: string;
+  company: string;
   title: string;
   description: string;
 }
 
-const TestimonialCarousel = ({ items }: { items: Item [] }) => {
+const TestimonialCarousel = ({ items }: { items: Item[] }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const handlePrevious = () => {
@@ -37,11 +36,17 @@ const TestimonialCarousel = ({ items }: { items: Item [] }) => {
   };
 
   return (
-    <Carousel className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto">
+    <Carousel className="w-full mx-auto">
       <CarouselContent>
         {items.map(
           (
-            { image = "", name = "...", title = "...", description = "..." },
+            {
+              image = "",
+              name = "...",
+              title = "...",
+              description = "...",
+              company = "...",
+            },
             index: number
           ) => (
             <CarouselItem
@@ -49,16 +54,40 @@ const TestimonialCarousel = ({ items }: { items: Item [] }) => {
               className={index === currentIndex ? "block" : "hidden"}
             >
               <Card className="border-none shadow-none">
-                <CardContent className="flex flex-col md:flex-row items-center p-0">
-                  <Image
-                    src={image}
-                    alt={name}
-                    className="w-full md:w-1/2 h-48 md:h-64 object-cover"
-                  />
-                  <div className="w-full md:w-1/2 p-4 bg-white">
-                    <h2 className="text-xl font-bold mb-2">{name}</h2>
-                    <p className="text-sm text-gray-600 mb-4">{title}</p>
-                    <p className="text-sm">{description}</p>
+                <CardContent className="grid grid-cols-2 gap-4 p-0">
+                  <div className="relative h-full">
+                    <Image
+                      src={image}
+                      alt={name}
+                      className="absolute inset-0 object-cover"
+                    />
+                  </div>
+                  <div className="grid grid-cols-2 h-full gap-40 ">
+                    <p className="col-span-2 font-semibold text-2xl">
+                      {description}
+                    </p>
+
+                    <div className="col-span-1 space-y-2 whitespace-nowrap">
+                      <h2 className="font-bold text-3xl">
+                        {name},<span className="text-lg">{company}</span>
+                      </h2>
+                      <p className="font-semibold text-lg">{title}</p>
+                    </div>
+
+                    <div className="col-span-1 place-self-end self-end flex items-center gap-2">
+                      <CarouselPrevious
+                        onClick={handlePrevious}
+                        className="relative inset-auto rounded-xl border border-black"
+                      >
+                        <ArrowLeftIcon className="h-4 w-4" />
+                      </CarouselPrevious>
+                      <CarouselNext
+                        onClick={handleNext}
+                        className="relative inset-auto bg-primary text-white rounded-xl"
+                      >
+                        <ArrowRightIcon className="h-4 w-4" />
+                      </CarouselNext>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -66,17 +95,6 @@ const TestimonialCarousel = ({ items }: { items: Item [] }) => {
           )
         )}
       </CarouselContent>
-      <div className="flex justify-end mt-4 space-x-2">
-        <CarouselPrevious
-          onClick={handlePrevious}
-          className="relative inset-auto"
-        >
-          <ArrowLeftIcon className="h-4 w-4" />
-        </CarouselPrevious>
-        <CarouselNext onClick={handleNext} className="relative inset-auto">
-          <ArrowRightIcon className="h-4 w-4" />
-        </CarouselNext>
-      </div>
     </Carousel>
   );
 };
