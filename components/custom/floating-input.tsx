@@ -1,33 +1,51 @@
-'use client';
-import { forwardRef } from 'react';
-import { cn } from '@/lib/utils';
-interface FloatingLabelInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+"use client";
+// UTILS
+import { forwardRef, useState } from "react";
+import { cn } from "@/lib/utils";
+
+interface FloatingLabelInputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string;
 }
 
-const FloatingLabelInput = forwardRef<HTMLInputElement, FloatingLabelInputProps>(
-  ({ label, className, ...props }, ref) => {
-    return (
-      <div className="relative">
-        <input
-          ref={ref}
-          type="text"
-          id={label}
-          className={cn("block text-black p-4 w-full h-10 text-base rounded-md bg-transparent border border-1 appearance-none focus:outline-none focus:ring-0 focus:border-red-500 peer",className)}
-          placeholder=" "
-          {...props}
-        />
-        <label
-          htmlFor={label}
-          className="absolute left-4 top-1/4 transform -translate-y-[100%] text-base text-gray-600 duration-300 scale-75 origin-[0] bg-transparent px-1 peer-focus:px-2 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 z-0 pointer-events-none"
-        >
-          {label}
-        </label>
-      </div>
-    );
-  }
-);
+const FloatingLabelInput = forwardRef<
+  HTMLInputElement,
+  FloatingLabelInputProps
+>(({ label, className, required = false, ...props }, ref) => {
+  const [isFocused, setIsFocused] = useState<boolean>(false);
+  const [hasValue, setHasValue] = useState<boolean>(false);
 
-FloatingLabelInput.displayName = 'FloatingLabelInput';
+  return (
+    <div className="relative mb-4">
+      <input
+        {...props}
+        className={cn(
+          "block px-3 py-2 w-full text-black bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 peer",
+          className
+        )}
+        ref={ref}
+        onFocus={() => setIsFocused(true)}
+        onBlur={(e) => {
+          setIsFocused(false);
+          setHasValue(e.target.value !== "");
+        }}
+        onChange={(e) => setHasValue(e.target.value !== "")}
+      />
+      <label
+        htmlFor={label}
+        className={`absolute text-sm duration-300 transform ${
+          isFocused || hasValue
+            ? "-translate-y-6 scale-75 text-red-600"
+            : "translate-y-0"
+        } top-3 left-3 origin-[0] peer-focus:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
+      >
+        {label}
+        {required ? "*" : ""}
+      </label>
+    </div>
+  );
+});
+
+FloatingLabelInput.displayName = "FloatingLabelInput";
 
 export default FloatingLabelInput;
