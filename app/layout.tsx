@@ -1,18 +1,49 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Open_Sans } from 'next/font/google';
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 
 const openSans = Open_Sans({
-  subsets: ['latin'],
-  weight: ['300', '400', '600', '700', '800'], 
-  display: 'swap',
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700", "800"],
+  display: "swap",
 });
 
 const everett = localFont({
-  src: "./fonts/Everett-Regular.woff",
+  src: [
+    {
+      path: "./fonts/TWKEverett-Thin.woff2",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "./fonts/TWKEverett-Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./fonts/TWKEverett-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/TWKEverett-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/TWKEverett-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./fonts/TWKEverett-Black.woff2",
+      weight: "800",
+      style: "normal",
+    }
+  ],
   variable: "--font-everett",
-  weight: "100 900",
+  weight: "100 800",
 });
 
 export const metadata: Metadata = {
@@ -20,11 +51,11 @@ export const metadata: Metadata = {
   description: "UI UX Digital Agency",
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang="en">
       <body className={`${openSans.className} ${everett.variable} antialiased`}>
@@ -32,4 +63,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

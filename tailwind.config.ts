@@ -11,7 +11,7 @@ const config: Config = {
   	extend: {
   		fontFamily: {
 			sans: ['Open Sans', 'sans-serif'],
-			'everett': ['var(--font-everett)'],
+			everett: ['var(--font-everett)'],
   		},
   		colors: {
   			primary: {
