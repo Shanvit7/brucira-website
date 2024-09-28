@@ -7,7 +7,7 @@ const Stats = () => (
       </b>
     </div>
 
-    <div className="grid grid-cols-1 font-everett text-center space-y-20 lg:grid-cols-4 lg:text-start lg:space-y-0">
+    <div className="grid grid-cols-4 font-everett text-center space-y-20">
       <div className="col-span-1 font-everett font-medium space-y-2">
         <strong className="text-7xl">
           60

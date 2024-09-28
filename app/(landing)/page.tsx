@@ -2,22 +2,21 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import AvatarCircles from "@/components/ui/avatar-circles";
-import Marquee from "@/components/ui/marquee";
 // ICONS
 import { ArrowRight, Play } from "lucide-react";
 // CONSTANTS
-import { BRANDS, COMPANY_PERSONS } from "@/lib/constant";
+import { COMPANY_PERSONS } from "@/lib/constant";
 // ASSETS - PERSON IMAGE
 import person from "@/public/intro/person.png";
 
 const Intro = () => (
-  <div className="grid grid-cols-2 gap-16">
+  <div className="grid grid-cols-1 gap-16">
     <h1 className="uppercase font-everett font-medium text-6xl col-span-2">
       We are a <br /> global <span className="text-primary">production</span>{" "}
       <br /> agency
     </h1>
 
-    <div className="col-span-2 flex gap-8 items-center justify-between flex-wrap">
+    <div className="col-span-1 flex gap-8 items-center justify-between flex-wrap">
       <div className="">
         <h2 className="font-semibold text-2xl">
           Designed with the specific needs of large B2B enterprises in mind,{" "}
@@ -31,7 +30,11 @@ const Intro = () => (
           <div className="flex items-center gap-2">
             <AvatarCircles avatarUrls={COMPANY_PERSONS} />
             <p className="font-everett font-medium">
-              Marin / Ayesha <br /> <span className="text-secondary opacity-60"> Global Services </span>
+              Marin / Ayesha <br />{" "}
+              <span className="text-secondary opacity-60">
+                {" "}
+                Global Services{" "}
+              </span>
             </p>
           </div>
         </div>
@@ -50,23 +53,6 @@ const Intro = () => (
           </Button>
         </div>
       </div>
-    </div>
-
-    <div className="col-span-2">
-      <Marquee>
-        <div className="flex items-center">
-          {BRANDS.map(({ logo = "", name = "" }, index: number) => (
-            <Image
-              src={logo}
-              alt={name}
-              key={index}
-              height={125}
-              width={125}
-              className="mx-14"
-            />
-          ))}
-        </div>
-      </Marquee>
     </div>
   </div>
 );

@@ -8,9 +8,9 @@ import { ArrowUpRight, ArrowDownRight } from "lucide-react";
 import companyLogo from "@/public/company_logo.jpg";
 
 const Topbar = () => (
-  <nav className="grid grid-cols-1 p-4 border border-b-1 md:grid-cols-2">
+  <nav className="grid grid-cols-2 p-4 border border-b-1">
     <Image src={companyLogo} alt="company_logo" width={150} height={150} />
-    <div className="col-span-1 place-self-center flex items-center md:place-self-end">
+    <div className="col-span-1 place-self-end flex items-center">
       <Button className="text-secondary opacity-60 text-base font-semibold" variant="link" asChild>
         <Link className="flex items-center gap-1" href="#">
           Services <ArrowUpRight className="size-4" />

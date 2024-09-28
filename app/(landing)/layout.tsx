@@ -3,6 +3,7 @@ import { ReactNode, FC } from "react";
 interface LandingLayoutProps {
   topbar: ReactNode;
   children: ReactNode;
+  brands: ReactNode;
   info: ReactNode;
   stats: ReactNode;
   testimonials: ReactNode;
@@ -13,6 +14,7 @@ interface LandingLayoutProps {
 const LandingLayout: FC<LandingLayoutProps> = ({
   topbar,
   children: intro,
+  brands,
   info,
   stats,
   testimonials,
@@ -24,6 +26,7 @@ const LandingLayout: FC<LandingLayoutProps> = ({
     <section className="p-16" id="intro">
       {intro}
     </section>
+    <section id="brands">{brands}</section>
     <section className="p-16" id="info">
       {info}
     </section>
@@ -36,9 +39,7 @@ const LandingLayout: FC<LandingLayoutProps> = ({
     <section className="p-16" id="faqs">
       {faqs}
     </section>
-    <footer id="footer">
-      {footer}
-    </footer>
+    <footer id="footer">{footer}</footer>
   </main>
 );
 
