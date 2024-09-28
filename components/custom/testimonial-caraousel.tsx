@@ -54,7 +54,7 @@ const TestimonialCarousel = ({ items }: { items: Item[] }) => {
               className={index === currentIndex ? "block" : "hidden"}
             >
               <Card className="border-none shadow-none">
-                <CardContent className="grid grid-cols-2 gap-4 p-0">
+                <CardContent className="grid grid-cols-1 lg:grid-cols-2 gap-4 p-0 min-h-96">
                   <div className="relative h-full">
                     <Image
                       src={image}
@@ -62,7 +62,7 @@ const TestimonialCarousel = ({ items }: { items: Item[] }) => {
                       className="absolute inset-0 object-cover"
                     />
                   </div>
-                  <div className="grid grid-cols-2 h-full gap-40 ">
+                  <div className="grid grid-cols-2 h-full">
                     <p className="col-span-2 font-semibold text-2xl">
                       {description}
                     </p>
@@ -74,16 +74,16 @@ const TestimonialCarousel = ({ items }: { items: Item[] }) => {
                       <p className="font-semibold text-lg">{title}</p>
                     </div>
 
-                    <div className="col-span-1 place-self-end self-end flex items-center gap-2">
+                    <div className="col-span-1 place-self-end self-end flex h-full items-end gap-2">
                       <CarouselPrevious
                         onClick={handlePrevious}
-                        className="relative inset-auto rounded-xl border border-black min-w-16 min-h-10"
+                        className="relative inset-auto rounded-full border border-black min-w-16 min-h-10"
                       >
                         <ArrowLeftIcon className="h-4 w-4" />
                       </CarouselPrevious>
                       <CarouselNext
                         onClick={handleNext}
-                        className="relative inset-auto bg-primary text-white rounded-xl min-w-16 min-h-10"
+                        className="relative inset-auto bg-primary text-white rounded-full min-w-16 min-h-10"
                       >
                         <ArrowRightIcon className="h-4 w-4" />
                       </CarouselNext>
