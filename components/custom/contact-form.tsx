@@ -5,7 +5,7 @@ import FloatingLabelInput from "@/components/custom/floating-input";
 import { ArrowRight } from "lucide-react";
 
 const ContactForm = () => (
-  <form className="space-y-2">
+  <form className="space-y-6 md:space-y-2">
     <strong className="font-semibold text-2xl">
       Give us few details and we&apos;ll get in touch
     </strong>

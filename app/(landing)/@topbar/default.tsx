@@ -10,15 +10,15 @@ import companyLogo from "@/public/company_logo.jpg";
 const Topbar = () => (
   <nav className="grid grid-cols-1 lg:grid-cols-2 p-4 border border-b-1">
     <Image
-      className="self-center"
+      className="self-center mx-auto my-4 lg:mx-0 lg:my-0"
       src={companyLogo}
       alt="company_logo"
       width={150}
       height={150}
     />
-    <div className="col-span-1 place-self-end flex items-center">
+    <div className="col-span-1 place-self-center lg:place-self-end flex flex-wrap justify-between gap-4 items-center">
       <Button
-        className="text-secondary opacity-60 text-base font-semibold"
+        className="text-secondary opacity-60 text-xs lg:text-base font-semibold"
         variant="link"
         asChild
       >
@@ -27,7 +27,7 @@ const Topbar = () => (
         </Link>
       </Button>
       <Button
-        className="text-secondary opacity-40 text-base font-semibold"
+        className="text-secondary opacity-40 text-xs lg:text-base font-semibold"
         variant="link"
         asChild
       >
@@ -36,7 +36,7 @@ const Topbar = () => (
         </Link>
       </Button>
       <Button
-        className="text-base text-secondary font-semibold"
+        className="text-secondary text-xs lg:text-base font-semibold"
         variant="link"
         asChild
       >

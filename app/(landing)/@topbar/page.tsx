@@ -10,7 +10,7 @@ import companyLogo from "@/public/company_logo.jpg";
 const Topbar = () => (
   <nav className="grid grid-cols-1 lg:grid-cols-2 p-4 border border-b-1">
     <Image
-      className="self-center mx-auto lg:mx-0"
+      className="self-center mx-auto my-4 lg:mx-0 lg:my-0"
       src={companyLogo}
       alt="company_logo"
       width={150}
