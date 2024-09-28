@@ -11,7 +11,7 @@ import person from "@/public/intro/person.png";
 
 const Intro = () => (
   <div className="grid grid-cols-1 gap-16">
-    <h1 className="uppercase font-everett font-medium text-6xl col-span-2">
+    <h1 className="uppercase font-everett font-medium text-5xl lg:text-6xl col-span-2">
       We are a <br /> global <span className="text-primary">production</span>{" "}
       <br /> agency
     </h1>

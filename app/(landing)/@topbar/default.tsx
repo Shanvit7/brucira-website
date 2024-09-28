@@ -8,20 +8,38 @@ import { ArrowUpRight, ArrowDownRight } from "lucide-react";
 import companyLogo from "@/public/company_logo.jpg";
 
 const Topbar = () => (
-  <nav className="grid grid-cols-2 p-4 border border-b-1">
-    <Image src={companyLogo} alt="company_logo" width={150} height={150} />
+  <nav className="grid grid-cols-1 lg:grid-cols-2 p-4 border border-b-1">
+    <Image
+      className="self-center"
+      src={companyLogo}
+      alt="company_logo"
+      width={150}
+      height={150}
+    />
     <div className="col-span-1 place-self-end flex items-center">
-      <Button className="text-secondary opacity-60 text-base font-semibold" variant="link" asChild>
+      <Button
+        className="text-secondary opacity-60 text-base font-semibold"
+        variant="link"
+        asChild
+      >
         <Link className="flex items-center gap-1" href="#">
           Services <ArrowUpRight className="size-4" />
         </Link>
       </Button>
-      <Button className="text-secondary opacity-40 text-base font-semibold" variant="link" asChild>
+      <Button
+        className="text-secondary opacity-40 text-base font-semibold"
+        variant="link"
+        asChild
+      >
         <Link className="flex items-center gap-1" href="#">
           Work <ArrowUpRight className="size-4" />
         </Link>
       </Button>
-      <Button className="text-base text-secondary font-semibold" variant="link" asChild>
+      <Button
+        className="text-base text-secondary font-semibold"
+        variant="link"
+        asChild
+      >
         <Link className="flex items-center gap-1" href="#">
           About <ArrowDownRight className="size-4 text-primary" />
         </Link>

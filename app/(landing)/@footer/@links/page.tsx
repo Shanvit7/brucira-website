@@ -1,6 +1,6 @@
 const Links = () => (
   <div className="">
-    <div className="grid grid-cols-5">
+    <div className="grid grid-cols-2 gap-10 lg:grid-cols-5">
       <div className="col-span-1 space-y-6">
         <h3 className="uppercase font-everett font-medium text-2xl">Company</h3>
         <ul className="text-lg">
@@ -48,8 +48,8 @@ const Links = () => (
 
     <hr className="text-grey-200 mt-20 mb-8" />
     <div className="flex items-center justify-between text-base">
-      <p>Copyright ©2023 Red Bangle</p>
-      <div className="inline-flex items-center gap-8">
+      <p className="text-xs md:text-base">Copyright ©2023 Red Bangle</p>
+      <div className="inline-flex items-center gap-4 md:gap-8 text-xs md:text-base">
         <p>Privacy Policy</p>
         <p>Legal</p>
         <p>Terms & Conditions</p>

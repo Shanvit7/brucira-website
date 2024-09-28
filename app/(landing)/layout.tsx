@@ -21,22 +21,22 @@ const LandingLayout: FC<LandingLayoutProps> = ({
   faqs,
   footer,
 }) => (
-  <main className="grid grid-cols-1">
+  <main className="grid grid-cols-1 overflow-x-hidden">
     <header id="topbar">{topbar}</header>
-    <section className="p-16" id="intro">
+    <section className="p-4 lg:p-16" id="intro">
       {intro}
     </section>
     <section id="brands">{brands}</section>
-    <section className="p-16" id="info">
+    <section className="p-4 lg:p-16" id="info">
       {info}
     </section>
-    <section className="p-16" id="stats">
+    <section className="p-4 lg:p-16" id="stats">
       {stats}
     </section>
-    <section className="p-16" id="stats">
+    <section className="p-4 lg:p-16" id="stats">
       {testimonials}
     </section>
-    <section className="p-16" id="faqs">
+    <section className="p-4 lg:p-16" id="faqs">
       {faqs}
     </section>
     <footer id="footer">{footer}</footer>

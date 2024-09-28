@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/accordion";
 
 const Faqs = () => (
-  <div className="grid grid-cols-2">
+  <div className="grid grid-cols-1 md:grid-cols-2">
     <div className="col-span-1 text-4xl">
       <strong className="font-everett font-medium text-5xl">
         Frequently asked <br /> questions

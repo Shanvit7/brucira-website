@@ -29,7 +29,7 @@ const Info = () => {
   return (
     <div className="grid grid-cols-10 gap-8">
       <div className="col-span-10">
-        <h2 className="font-everett font-medium text-5xl">
+        <h2 className="font-everett font-medium text-4xl lg:text-5xl">
           Our expertise and passion <br /> breathe life into your narratives
         </h2>
       </div>

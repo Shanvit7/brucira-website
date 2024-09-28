@@ -3,9 +3,9 @@ import ContactForm from "@/components/custom/contact-form";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Form = () => (
-  <div className="grid grid-cols-2 bg-footer p-16">
+  <div className="grid grid-cols-1 md:grid-cols-2 bg-footer p-4 md:p-16">
     <div className="col-span-1">
-      <h4 className="font-everett uppercase font-medium text-6xl">
+      <h4 className="font-everett uppercase font-medium text-4xl md:text-6xl">
         Lets start
         <br />
         something
@@ -44,7 +44,7 @@ const Form = () => (
       </div>
     </div>
 
-    <div className="col-span-1 p-16 py-32">
+    <div className="col-span-1 p-4 md:p-16 py-14 md:py-32">
       <ContactForm />
     </div>
   </div>

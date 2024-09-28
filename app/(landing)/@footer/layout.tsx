@@ -10,7 +10,7 @@ const Footer: FC<FooterLayoutProps> = ({ form, motto, links }) => (
   <>
     <div>{form}</div>
     <div>{motto}</div>
-    <div className="p-16">{links}</div>
+    <div className="p-4 lg:p-16">{links}</div>
   </>
 );
 

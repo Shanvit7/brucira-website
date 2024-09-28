@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Open_Sans } from "next/font/google";
-import "./globals.css";
+import "@/styles/globals.css";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -93,7 +93,7 @@ const RootLayout = ({
       <head>
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no, viewport-fit=cover"
+          content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover"
         />
       </head>
       <body
